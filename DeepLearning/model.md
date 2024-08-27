@@ -1,0 +1,18 @@
+- self-attention
+- transformer
+- 为什么self-attention可以堆叠多层，有什么作用？ 
+- 多头有什么作用？如果想让不同头之间有交互，可以怎么做？
+- 什么是FM和FFM
+- 为什么FM适合高维稀疏特征
+- DeepFM
+- Wide & Deep
+- 为什么Deep部分和wide部分要共享embedding输入，不共享有什么好处和坏处
+- DIN
+- LSTM
+- XGBoost 的特征重要性是如何得到的？
+- XGBoost 是如何分裂的
+- 随机森林和 lightgbm 的一些参数
+- 随机森林的每剪枝
+- word2vec
+- COBW - 预测中心词
+- Skip-gram - 预测context
