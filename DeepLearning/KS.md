@@ -1,12 +1,32 @@
-XGBoost 的特征重要性是如何得到的？
-XGBoost 是如何分裂的
-随机森林和 lightgbm 的一些参数
-随机森林的每剪枝
-特征工程怎么做
-什么是FM和FFM
-self-attention
-transformer
-word2vec
-COBW - 预测中心词
-Skip-gram - 预测context
-如何保持嵌入一致性的问题
+- 特征工程怎么做
+-- 111
+- 什么是FM和FFM
+- self-attention
+- transformer
+- 如何保持嵌入一致性的问题
+- 针对高活用户和低活用户，计算UAUC会有问题，高活用户的 UAUC值比较置信，而低活用户的UAUC值不置信，该如何处理？WUAUC对序列模型是否了解？
+- 开放性问题，优化观看时长，怎么设计模型？针对label的设置
+- 为什么self-attention可以堆叠多层，有什么作用？ 
+- 多头有什么作用？如果想让不同头之间有交互，可以怎么做？
+- 讲一讲多目标优化，MMoE怎么设计？如果权重为1,0,0这样全部集中在某一个专家上该怎么办？
+- 介绍一下神经网络的优化器有哪些。
+- 介绍一下推荐算法的链路流程
+- 介绍一下神经网络的初始化方法
+- 讲一讲推荐算法序列建模的模型
+- 交叉熵推导
+- sigmoid和softmax
+- 对Embedding的理解
+- LSTM
+- 解释AUC
+- DeepFM
+- 为什么Deep部分和wide部分要共享embedding输入，不共享有什么好处和坏处
+- 为什么FM适合高维稀疏特征
+- 对推荐系统有什么了解
+- 模型如何进行在线训练，和离线训练有什么区别
+- XGBoost 的特征重要性是如何得到的？
+- XGBoost 是如何分裂的
+- 随机森林和 lightgbm 的一些参数
+- 随机森林的每剪枝
+- - word2vec
+- COBW - 预测中心词
+- Skip-gram - 预测context
