@@ -1,14 +1,14 @@
 - 手写transforner
 - 寻找两个有序数组的中位数（hard？没写出来）
-  `class Solution:
-    def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
+`
+
         n = len(nums1)
         m = len(nums2)
         m1 = 0
         m2 = 0
         i = 0
         j = 0
-
+  
         for count in range((m+n)//2+1):
             m2 = m1
             if i<n and j<m:
@@ -29,7 +29,8 @@
             return (m1+m2)/2
         else: return m1
 
-        return 0`
+        return 0
+  `
 - 寻找长度为N，只包含1～N-1的数组中重复过一次的那个数，时间O(n)， 空间O(1)，在有序有重复数组中查找第一个k的下标，不符合则返回第一个>k的下标，字符串去掉空格
 - 在底部高度不规则的正方形水池中，判断水面高度为t时是否能从左上角游到右下角，寻找最小的t以满足能游到右下角
 - 用栈实现队列
