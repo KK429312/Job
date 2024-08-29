@@ -39,6 +39,22 @@
 - 数组中的第K个最大元素
 - 反转链表
 - 小偷知道每家有多少钱，但偷了一家之后，不能偷挨着的两家，否则立刻会报警。输入一个列表，记录每家有多少钱，输出小偷能偷到的最多的钱
+
+      class Solution:
+        def rob(self, nums: List[int]) -> int:
+            if len(nums) == 0: return 0
+            if len(nums) <=2: return max(nums)
+            if len(nums) ==3: return max(nums[0]+nums[2], nums[1])
+    
+            dp = [nums[0],  max(nums[0], nums[1]), max(nums[0]+nums[2], nums[1])]
+            for i in range(3, len(nums)):
+                dp.append(
+                    max(
+                        dp[i-1], dp[i-2]+ nums[i], dp[i-3]+ nums[i]
+                    )
+                )
+            return dp[-1]
+  
 - leetcode 20， 有效的括号
 
       class Solution(object):
