@@ -31,7 +31,20 @@
         return 0
   
 - 在底部高度不规则的正方形水池中，判断水面高度为t时是否能从左上角游到右下角，寻找最小的t以满足能游到右下角
-- 找出字符串中最长的不含重复字符的子串长度，用双指针轻松解决
+- 找出字符串中最长的不含重复字符的子串长度
+  
+      class Solution:
+        def lengthOfLongestSubstring(self, s: str) -> int:
+            count = 0
+            for i in range(len(s)):
+                lst = []
+                for j in range(i,len(s)):
+                    if s[j] not in lst:
+                        lst.append(s[j])
+                        if count<len(lst):
+                            count = len(lst)
+                    else: break
+            return count
 - 计算岛屿数量
 - 最长回文字串
   
