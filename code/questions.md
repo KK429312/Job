@@ -40,6 +40,31 @@
 - 反转链表
 - 小偷知道每家有多少钱，但偷了一家之后，不能偷挨着的两家，否则立刻会报警。输入一个列表，记录每家有多少钱，输出小偷能偷到的最多的钱
 - leetcode 20， 有效的括号
+
+      class Solution(object):
+          def isValid(self, s):
+              """
+              :type s: str
+              :rtype: bool
+              """
+              if len(s)%2!=0 or s[0] not in ["(", "[", "{"]:
+                  return False
+              
+              lst = []
+              for i in s:
+                  if i in ["(", "[", "{"] or len(lst) == 0:
+                      lst.append(i)
+                  else:
+                      if lst[-1]+i in ["()","[]","{}"]:
+                          lst.pop()
+                      else:
+                          return False
+                      
+              if len(lst)>0:
+                  return False
+      
+              return True
+  
 - 二叉树，每次可以切分成左右两个子树，对两边子树所有结点的值求和，再乘积。求遍历所有切分点情况下乘积的最大值
 - 输入带有多个空格的字符串，返回只有一个空格隔开的
 
