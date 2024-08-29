@@ -30,12 +30,30 @@
 
         return 0
   
-- 寻找长度为N，只包含1～N-1的数组中重复过一次的那个数，时间O(n)， 空间O(1)，在有序有重复数组中查找第一个k的下标，不符合则返回第一个>k的下标，字符串去掉空格
 - 在底部高度不规则的正方形水池中，判断水面高度为t时是否能从左上角游到右下角，寻找最小的t以满足能游到右下角
-- 用栈实现队列
 - 找出字符串中最长的不含重复字符的子串长度，用双指针轻松解决
 - 计算岛屿数量
 - 最长回文字串
+  
+        class Solution:
+          def expend(self, s, left, right):
+              while left>=0 and right<len(s) and s[left]==s[right]:
+                  left -= 1
+                  right += 1
+              return left + 1, right -1 
+      
+      
+          def longestPalindrome(self, s: str) -> str:
+              start = 0
+              end = 0
+              for i in range(len(s)):
+                  l1, r1 = self.expend(s, i, i)
+                  l2, r2 = self.expend(s, i, i+1)
+                  if r1-l1>end-start:
+                      start, end = l1, r1
+                  if r2-l2>end-start:
+                      start, end = l2, r2
+              return s[start: end+1]
 - 数组中的第K个最大元素
 - 反转链表
 - 小偷知道每家有多少钱，但偷了一家之后，不能偷挨着的两家，否则立刻会报警。输入一个列表，记录每家有多少钱，输出小偷能偷到的最多的钱
