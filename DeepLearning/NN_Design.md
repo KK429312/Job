@@ -70,5 +70,7 @@
   - 可以作为多分类任务输出层
 
 - 推荐系统损失函数
-  - 
-
+![img.png](images/imgmse.png)
+![img.png](images/imgce.png)
+![img.png](images/bpr.png)
+![img.png](images/imgpwl.png)
